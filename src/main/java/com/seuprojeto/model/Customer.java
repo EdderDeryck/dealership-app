@@ -47,10 +47,10 @@ public class Customer extends Person {
     public void setCnhCategory(String cnhCategory) {
         this.cnhCategory = cnhCategory;
     }
-    public boolean canRideMotorcycle() {
+
+    public boolean validationMotorcycle() {
         return cnhCategory != null && cnhCategory.contains("A");
     }
-
 
     @Override
     public void introduce() {
