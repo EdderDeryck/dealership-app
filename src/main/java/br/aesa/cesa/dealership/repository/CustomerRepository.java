@@ -7,15 +7,15 @@ import java.util.List;
 public class CustomerRepository {
     private final List<Customer> customers = new ArrayList<>();
 
-    public void adicionar(Customer c) {
+    public void add(Customer c) {
         customers.add(c);
     }
 
-    public List<Customer> listar() {
+    public List<Customer> list() {
         return customers;
     }
 
-    public Customer buscarPorCpf(String cpf) {
+    public Customer searchbycpf(String cpf) {
         for (Customer c : customers) {
             if (c.getCpf().equals(cpf)) {
                 return c;
@@ -24,8 +24,8 @@ public class CustomerRepository {
         return null;
     }
 
-    public boolean remover(String cpf) {
-        Customer c = buscarPorCpf(cpf);
+    public boolean remove(String cpf) {
+        Customer c = searchbycpf(cpf);
         if (c != null) {
             customers.remove(c);
             return true;
