@@ -15,7 +15,7 @@ public class CustomerRepository {
         return customers;
     }
 
-    public Customer searchbycpf(String cpf) {
+    public Customer searchByCpf(String cpf) {
         for (Customer c : customers) {
             if (c.getCpf().equals(cpf)) {
                 return c;
