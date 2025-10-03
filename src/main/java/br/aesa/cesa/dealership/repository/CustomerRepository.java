@@ -12,10 +12,10 @@ public class CustomerRepository {
     }
 
     public List<Customer> list() {
-        return customers;
+        return new ArrayList<>(customers);
     }
 
-    public Customer searchByCpf(String cpf) {
+    public Customer findByCpf(String cpf) {
         for (Customer c : customers) {
             if (c.getCpf().equals(cpf)) {
                 return c;
@@ -25,7 +25,7 @@ public class CustomerRepository {
     }
 
     public boolean remove(String cpf) {
-        Customer c = searchbycpf(cpf);
+        Customer c = findByCpf(cpf);
         if (c != null) {
             customers.remove(c);
             return true;
