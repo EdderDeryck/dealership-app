@@ -49,6 +49,8 @@ public class Customer extends Person {
     public void setCnhCategory(String cnhCategory) {
         this.cnhCategory = cnhCategory;
     }
+    
+    @Override
      public void introduce() {
         System.out.println("Cliente: " + getName());
         System.out.println("CPF: " + getCpf());
