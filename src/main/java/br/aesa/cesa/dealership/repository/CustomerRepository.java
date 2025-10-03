@@ -5,13 +5,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerRepository {
-    private final List<Customer> customer = new ArrayList<>();
+    private final List<Customer> customers = new ArrayList<>();
 
-    public void adicionar(Customer cliente) {
-        customer.add(cliente);
+    public void adicionar(Customer c) {
+        customers.add(c);
     }
 
     public List<Customer> listar() {
-        return customer;
+        return customers;
+    }
+
+    public Customer buscarPorCpf(String cpf) {
+        for (Customer c : customers) {
+            if (c.getCpf().equals(cpf)) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public boolean remover(String cpf) {
+        Customer c = buscarPorCpf(cpf);
+        if (c != null) {
+            customers.remove(c);
+            return true;
+        }
+        return false;
     }
 }
