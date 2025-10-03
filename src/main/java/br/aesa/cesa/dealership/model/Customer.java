@@ -49,14 +49,4 @@ public class Customer extends Person {
     public void setCnhCategory(String cnhCategory) {
         this.cnhCategory = cnhCategory;
     }
-
-    public boolean validationMotorcycle() {
-        return cnhCategory != null && cnhCategory.contains("A");
-    }
-    public void introduce() {
-        System.out.println("Cliente: " + getName());
-        System.out.println("CPF: " + getCpf());
-        System.out.println("Data de Nascimento: " + getDate());
-        System.out.println("CNH do motorista: " + getCnh() + "(Categoria " + getCnhCategory() + ")");
-    }
 }
