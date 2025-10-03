@@ -11,8 +11,8 @@ public class CustomerService {
         this.repo = repo;
     }
 
-    public boolean cadastrarCustomer(String nome, String cpf) {
-        if (repo.buscarPorCpf(cpf) != null) {
+    public boolean registerCustomer(String name, String cpf) {
+        if (repo.searchByCpf(cpf) != null) {
             System.out.println("Erro: já existe um cliente com esse CPF!");
             return false;
         }
@@ -21,16 +21,16 @@ public class CustomerService {
         return true;
     }
 
-    public List<Customer> listarCustomers() {
+    public List<Customer> listCustomers() {
         return repo.listar();
     }
 
-    public Customer buscarCustomer(String cpf) {
-        return repo.buscarPorCpf(cpf);
+    public Customer registerCustomer(String cpf) {
+        return repo.searchByCpf(cpf);
     }
 
-    public boolean removerCustomer(String cpf) {
-        return repo.remover(cpf);
+    public boolean removeCustomer(String cpf) {
+        return repo.remove(cpf);
     }
 
     public boolean podePilotarMoto(Customer customer) {
