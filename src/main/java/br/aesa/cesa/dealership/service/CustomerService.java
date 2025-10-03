@@ -11,18 +11,29 @@ public class CustomerService {
         this.repo = repo;
     }
 
-    public void cadastrarCustomer(String nome, String cpf) {
-        for (Customer c : repo.listar()) {
-            if (c.getCpf().equals(cpf)) {
-                System.out.println("Erro: já existe um cliente com esse CPF!");
-                return;
-            }
+    public boolean cadastrarCustomer(String nome, String cpf) {
+        if (repo.buscarPorCpf(cpf) != null) {
+            System.out.println("Erro: já existe um cliente com esse CPF!");
+            return false;
         }
         repo.adicionar(new Customer(nome, cpf));
-        System.out.println("Customer cadastrado com sucesso!");
+        System.out.println("Cliente cadastrado com sucesso!");
+        return true;
     }
 
     public List<Customer> listarCustomers() {
         return repo.listar();
+    }
+
+    public Customer buscarCustomer(String cpf) {
+        return repo.buscarPorCpf(cpf);
+    }
+
+    public boolean removerCustomer(String cpf) {
+        return repo.remover(cpf);
+    }
+
+    public boolean podePilotarMoto(Customer customer) {
+        return customer.getCnhCategory() != null && customer.getCnhCategory().contains("A");
     }
 }
