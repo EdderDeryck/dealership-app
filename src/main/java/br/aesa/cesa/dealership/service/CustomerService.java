@@ -1,7 +1,7 @@
 package main.java.br.aesa.cesa.dealership.service;
 
-import main.java.br.aesa.cesa.dealership.repository.CustomerRepository;
 import main.java.br.aesa.cesa.dealership.model.Customer;
+import main.java.br.aesa.cesa.dealership.repository.CustomerRepository;
 import java.util.List;
 
 public class CustomerService {
@@ -12,28 +12,29 @@ public class CustomerService {
     }
 
     public boolean registerCustomer(String name, String cpf) {
-        if (repo.searchByCpf(cpf) != null) {
+        if (repo.findByCpf(cpf) != null) {
             System.out.println("Erro: já existe um cliente com esse CPF!");
             return false;
         }
-        repo.adicionar(new Customer(nome, cpf));
+        repo.add(new Customer(name, cpf));
         System.out.println("Cliente cadastrado com sucesso!");
         return true;
     }
 
     public List<Customer> listCustomers() {
-        return repo.listar();
+        return repo.list();
     }
 
-    public Customer registerCustomer(String cpf) {
-        return repo.searchByCpf(cpf);
+    public Customer findCustomer(String cpf) {
+        return repo.findByCpf(cpf);
     }
 
     public boolean removeCustomer(String cpf) {
         return repo.remove(cpf);
     }
 
-    public boolean podePilotarMoto(Customer customer) {
-        return customer.getCnhCategory() != null && customer.getCnhCategory().contains("A");
+    public boolean canRideMotorcycle(Customer customer) {
+        String cat = customer.getCnhCategory();
+        return cat != null && cat.contains("A");
     }
 }
