@@ -1,4 +1,4 @@
-package main.java.br.aesa.cesa.dealership;
+package main.java.br.aesa.cesa.dealership.model;
 
 public class Customer extends Person {
     private String phone;

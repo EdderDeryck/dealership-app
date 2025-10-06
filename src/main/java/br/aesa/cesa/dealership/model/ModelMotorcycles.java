@@ -1,4 +1,4 @@
-package main.java.br.aesa.cesa.dealership;
+package main.java.br.aesa.cesa.dealership.model;
 
 public class ModelMotorcycles {
     private String model;

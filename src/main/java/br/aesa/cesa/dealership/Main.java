@@ -1,5 +1,9 @@
 package main.java.br.aesa.cesa.dealership;
 
+import main.java.br.aesa.cesa.dealership.model.Customer;
+import main.java.br.aesa.cesa.dealership.model.Motorcycles;
+import main.java.br.aesa.cesa.dealership.model.Sales;
+
 public class Main {
     public static void main(String[] args) {
         Customer customer = new Customer("Edder Deryck", "12345678900", "81999999999", "2002-10-10", "123456", "A");
