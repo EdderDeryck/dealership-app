@@ -1,3 +1,5 @@
+package main.java.br.aesa.cesa.dealership;
+
 public class Customer extends Person {
     private String phone;
     private String date;
