@@ -1,4 +1,4 @@
-package main.java.br.aesa.cesa.dealership.model;
+package main.java.br.aesa.cesa.dealership;
 
 public class Customer extends Person {
     private String phone;
@@ -6,13 +6,6 @@ public class Customer extends Person {
     private String cnh;
     private String cnhCategory;
 
-    public Customer() {
-        super();
-    }
-    
-public Customer(String name, String cpf) {
-    super(name, cpf);
-}
     public Customer(String name, String cpf, String phone, String date, String cnh, String cnhCategory) {
         super(name, cpf);
         this.phone = phone;
@@ -52,12 +45,6 @@ public Customer(String name, String cpf) {
     public void setCnhCategory(String cnhCategory) {
         this.cnhCategory = cnhCategory;
     }
-    
-    @Override
-     public void introduce() {
-        System.out.println("Cliente: " + getName());
-        System.out.println("CPF: " + getCpf());
-        System.out.println("Data de Nascimento: " + getDate());
-        System.out.println("CNH do motorista: " + getCnh() + "Categoria (" + getCnhCategory() + ")");
-    }
+
+
 }

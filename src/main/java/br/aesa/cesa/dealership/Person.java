@@ -1,4 +1,4 @@
-package main.java.br.aesa.cesa.dealership.person;
+package main.java.br.aesa.cesa.dealership;
 
 public abstract class Person {
     private String name;
