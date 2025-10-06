@@ -1,11 +1,9 @@
-package main.java.br.aesa.cesa.dealership;
-
 public class Customer extends Person {
     private String phone;
     private String date;
     private String cnh;
     private String cnhCategory;
-
+    
     public Customer(String name, String cpf, String phone, String date, String cnh, String cnhCategory) {
         super(name, cpf);
         this.phone = phone;
@@ -45,6 +43,15 @@ public class Customer extends Person {
     public void setCnhCategory(String cnhCategory) {
         this.cnhCategory = cnhCategory;
     }
+    public boolean canRideMotorcycle() {
+        return cnhCategory != null && cnhCategory.contains("A");
+    }
 
-
+    @Override
+    public void introduce() {
+        System.out.println("Cliente: " + getName());
+        System.out.println("CPF: " + getCpf());
+        System.out.println("Data de Nascimento: " + getDate());
+        System.out.println("CNH do motorista: " + getCnh() + "(Categoria " + getCnhCategory() + ")");
+    }
 }
