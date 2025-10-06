@@ -51,7 +51,6 @@ public class Customer extends Person {
         return cnhCategory != null && cnhCategory.contains("A");
     }
 
-
     @Override
     public void introduce() {
         System.out.println("Cliente: " + getName());
