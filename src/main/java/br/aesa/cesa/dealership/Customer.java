@@ -1,13 +1,11 @@
+package main.java.br.aesa.cesa.dealership;
+
 public class Customer extends Person {
     private String phone;
     private String date;
     private String cnh;
     private String cnhCategory;
-
-    public Customer() {
-        super();
-    }
-
+    
     public Customer(String name, String cpf, String phone, String date, String cnh, String cnhCategory) {
         super(name, cpf);
         this.phone = phone;

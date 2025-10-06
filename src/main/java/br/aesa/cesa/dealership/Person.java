@@ -1,11 +1,8 @@
-package main.java.br.aesa.cesa.dealership.model;
+package main.java.br.aesa.cesa.dealership;
 
 public abstract class Person {
     private String name;
     private String cpf;
-
-    public Person() {
-    }
 
     public Person(String name, String cpf) {
         this.name = name;
@@ -31,6 +28,5 @@ public abstract class Person {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-    public abstract void introduce();
+    public void introduce(){}
 }
