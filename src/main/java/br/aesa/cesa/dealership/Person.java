@@ -4,9 +4,6 @@ public abstract class Person {
     private String name;
     private String cpf;
 
-    public Person() {
-    }
-
     public Person(String name, String cpf) {
         this.name = name;
         this.cpf = cpf;
@@ -32,5 +29,4 @@ public abstract class Person {
         this.cpf = cpf;
     }
 
-    public abstract void introduce();
 }
