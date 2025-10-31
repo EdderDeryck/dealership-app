@@ -36,8 +36,3 @@ O projeto foi originalmente hospedado em um repositório privado para avaliaçã
 - **Programação Orientada a Objetos (POO)**  
 - **Git & GitHub** (para versionamento)  
 - **IDE**: IntelliJ IDEA  
-
----
-
-### 📜 **Licença**
-Este projeto é de uso **educacional** e pode ser utilizado como referência para estudos sobre POO em Java.
