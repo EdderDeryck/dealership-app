@@ -1,4 +1,4 @@
-# 🏍️ Motorcycle Workshop — POO Project
+#  Motorcycle Workshop — POO Project
 
 Este projeto foi desenvolvido como parte da disciplina de **Programação Orientada a Objetos (POO)**, com o tema **oficina de motocicletas**.
 
@@ -14,7 +14,7 @@ O sistema simula o funcionamento de uma oficina de motos, aplicando os principai
 
 ---
 
-### 👥 **Participantes do grupo**
+###  **Participantes do grupo**
 - **Edder Deryck**  
 - **Gustavo**  
 - **Sylmar**  
@@ -22,7 +22,7 @@ O sistema simula o funcionamento de uma oficina de motos, aplicando os principai
 
 ---
 
-### 💡 **Sobre o projeto**
+###  **Sobre o projeto**
 
 O código foi criado com base nos requisitos da disciplina, onde cada integrante colaborou com partes específicas do sistema.  
 O objetivo era demonstrar o uso prático dos pilares da POO em um contexto realista — uma **oficina de motocicletas**, com classes que representam clientes, motos, serviços e funcionários.
@@ -31,7 +31,7 @@ O projeto foi originalmente hospedado em um repositório privado para avaliaçã
 
 ---
 
-### ⚙️ **Tecnologias utilizadas**
+###  **Tecnologias utilizadas**
 - **Java**  
 - **Programação Orientada a Objetos (POO)**  
 - **Git & GitHub** (para versionamento)  
